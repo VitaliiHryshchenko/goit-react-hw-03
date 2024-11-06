@@ -1,6 +1,6 @@
 import { HiUser, HiPhone } from "react-icons/hi2";
 import s from "./Contact.module.css";
-const Contact = ({ contact: { id, name, number } }) => {
+const Contact = ({ contact: { id, name, number }, onDelete }) => {
   return (
     <div>
       <p>
@@ -11,7 +11,9 @@ const Contact = ({ contact: { id, name, number } }) => {
         <HiPhone />
         {number}
       </p>
-      <button type="button">Delete</button>
+      <button type="button" onClick={() => onDelete(id)}>
+        Delete
+      </button>
     </div>
   );
 };

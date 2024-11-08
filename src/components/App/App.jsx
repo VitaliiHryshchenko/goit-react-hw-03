@@ -37,8 +37,8 @@ const App = () => {
   );
 
   return (
-    <div>
-      <h1>Phonebook</h1>
+    <div className={s.container}>
+      <h1 className={s.title}>Phonebook</h1>
       <ContactForm onAdd={addContact} />
       <SearchBox value={searchByName} onSearch={setSearchByName} />
       <ContactList contacts={filteredContacts} onDelete={deleteContact} />
